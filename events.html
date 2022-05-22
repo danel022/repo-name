@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resert.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>События</title>
+</head>
+<body class="body-event">
+
+  <header>
+    <div class="logo" onclick="slowScroll('#top')">
+      <span>КИРОВСКИЙ ПАРК</span>
+    </div>
+    <div class="about">
+      <a href="index.html">Главная</a>
+      <a href="history.html">История</a>
+      <a href="events.html">События</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+    <section> 
+      <h1 class="class-h1">События в Кировском парке</h1>
+      <div class="post-wrap">
+        <div class="post-item one">
+        <div class="item-content">
+        <div class="item-icon group"></div>
+        <div class="item-body">
+        <h3>Занятия йогой на природе</h3>
+        <p>Йога-центр "Лотос"</p>
+        </div>
+        <div class="item-footer">
+        <a href="#" class="link"><span>Сб, Вс в 8:00</span></a>
+        </div>
+        </div>
+        </div>
+        
+        <div class="post-item one">
+        <div class="item-content">
+        <div class="item-icon tree"></div>
+        <div class="item-body">
+        <h3>"Учимся бегать"</h3>
+        <p>Беговой клуб "Syktyvkar Runners"</p>
+        </div>
+        <div class="item-footer">
+        <a href="#" class="link"><span> Среда - 19:00</span></a>
+        </div>
+        </div>
+        </div>
+
+        <div class="post-item  two">
+          <div class="item-content">
+          <div class="item-icon video"></div>
+          <div class="item-body">
+          <h3>Фестиваль рисунков «Безопасное детство»</h3>
+          <p>Поисково-спасательный отряд "ЛизаАлерт"</p>
+          </div>
+          <div class="item-footer">
+          <a href="#" class="link"><span>28 мая в 13:00</span></a>
+          </div>
+          </div>
+          </div>
+        
+        <div class="post-item two">
+        <div class="item-content">
+        <div class="item-icon anchor"></div>
+        <div class="item-body">
+        <h3>Акция "Дед Мороз на прогулке"</h3>
+        <p>Событие завершено.</p>
+        </div>
+        <div class="item-footer">
+        <a href="#" class="link"><span>Декабрь 2021</span></a>
+        </div>
+        </div>
+        </div>
+        
+        
+
+    </section>
+    
+    <footer>
+        <span class="footer_text"> КИРОВСКИЙ ПАРК 2022 © Все права защищены.</span>
+    </footer>
+    <script>
+        function slowScroll(id) {
+          $('html, body').animate({
+            scrollTop: $(id).offset().top
+          }, 500);
+        }
+    
+        $(document).on("scroll", function () {
+          if ($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+          else
+            $("header").attr("class", "fixed");
+        });
+      </script>
+</body>
+</html>

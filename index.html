@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo" onclick="slowScroll('#top')">
+      <span>КИРОВСКИЙ ПАРК</span>
+    </div>
+    <div class="about">
+      <a href="index.html">Главная</a>
+      <a href="history.html">История</a>
+      <a href="events.html">События</a>
+      <a href="about.html">О нас</a>
+    </div>
+  </header>
+
+  <div class="top" id="top">
+    <h1>ПАРК КУЛЬТУРЫ И ОТДЫХА</h1>
+    <h3>ИМЕНИ С.М. КИРОВА</h3>
+  </div>
+
+  <div class="main">
+    <div class="intro">
+      <h2>Мы рады приветствовать Вас на нашем сайте!</h2>
+    </div>
+    <div class="text">
+      <span>Каждый город может похвастаться своим центральным парком.Сыктывкар не исключение. <br> Парк культуры и
+        отдыха
+        имени С.М.Кирова существует с 1934 года, а его история началась с конца XIX века. <br>Территория парка открыта
+        для
+        посетителей, вход в него свободный. Каждый житель города или турист может прогуляться по набережной, любуясь
+        чистыми водами реки Сысолы. <br> В августе 2016 года парк вновь открылся для горожан после реконструкции,
+        которую
+        провела Администрация города Сыктывкара.</span>
+    </div>
+  </div>
+
+  <div class="overview">
+    <h2>Как добраться?</h2>
+    <P>Постройте свой маршрут с нами!</P>
+    <div class="map-container">
+      <div class="map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0625f714430b369ea9442832654569d0b02f44f22e62db35459d94e7646f1d32&amp;source=constructor"
+          width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+      <div class="map-span">
+        <h4>Часть ул. Кирова, которая примыкает к парку, является пешеходной.<br> К ней ведут следующие улицы:<br>
+          Горького, Орджоникидзе, Бабушкина, Куратова, Коммунистическая <br> Ближайшая остановка находится на ул.
+          Советская -
+          “Национальный музей Республики Коми”. Останавливаются следующие автобусы: <br> 1, 3, 5, 12, 23, 25, 46, 55,
+          126, 174.<br>
+          Оборудованной автомобильной парковки рядом с парком нет, поэтому люди оставляют свои машины вдоль
+          вышеперечисленных улиц.
+        </h4>
+      </div>
+    </div>
+    <section class="entertainment" id="top">
+      <h2>Что посетить?</h2>
+      <P>Выберете с нами!</P>
+      <div class="entertainment-list">
+        <a href="image/2.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover">Семейное кафе<br>Ежедневно с 11:00 до 20:00</div>
+          <img src="image/2.jpg" alt="alt">
+        </a>
+        <a href="image/3.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover">Национальная галерея Республики Коми<br>вт-вс 10:00–18:00; <br>чт 10:00–20:00; <br>пн - выходной;</div>
+          <img src="image/3.jpg" alt="alt">
+        </a>
+        <a href="image/4.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover">  Ресторан "Persona Grata"<br>пн-вс 12:00–00:00;</div>
+          <img src="image/4.jpg" alt="alt">
+        </a>
+        <a href="image/5.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover"> Уличная библиотека</div>
+          <img src="image/5.jpg" alt="alt">
+        </a>
+        <a href="image/6.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover">Дом-музей И.П.Морозова</div>
+          <img src="image/6.jpg " alt="alt">
+        </a>
+        <a href="image/7.jpg" class="entertainment-item" target="_blank">
+          <div class="entertainment-item-hover">Веревочный аттракцион</div>
+          <img src="image/7.jpg " alt="alt">
+        </a>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script src="js.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html, body').animate({
+          scrollTop: $(id).offset().top
+        }, 500);
+      }
+
+      $(document).on("scroll", function () {
+        if ($(window).scrollTop() === 0)
+          $("header").removeClass("fixed");
+        else
+          $("header").attr("class", "fixed");
+      });
+    </script>
+</body>
+
+</html>
